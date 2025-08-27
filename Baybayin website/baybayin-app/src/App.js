@@ -1,39 +1,32 @@
 import React, { useState } from 'react';
 import GetStarted from './GetStarted';
-import Login from './Login';
 import Dashboard from './Dashboard';
 import Posts from './Posts';
-import Resources from './Resources';  // ✅ new import
+import Resources from './Resources';
 
 function App() {
-  const [stage, setStage] = useState('start'); // 'start' → 'login' → 'dashboard' → 'posts' → 'resources'
-  const [userType, setUserType] = useState(null);
+  const [stage, setStage] = useState('start'); // 'start' → 'dashboard' → 'posts' → 'resources'
 
-  const handleStart = () => setStage('login');
-  const handleLogin = (role) => {
-    setUserType(role);
-    setStage('dashboard');
-  };
+  const handleStart = () => setStage('dashboard');
 
   return (
     <div>
       {stage === 'start' && <GetStarted onGetStarted={handleStart} />}
-      {stage === 'login' && <Login onLogin={handleLogin} />}
-      
+
       {stage === 'dashboard' && (
         <Dashboard 
-          userType={userType} 
           onGoPosts={() => setStage('posts')} 
-          onGoResources={() => setStage('resources')}   // ✅ navigate to Resources
+          onGoResources={() => setStage('resources')} 
+          onBack={() => setStage('start')} // ⬅️ back to GetStarted
         />
       )}
-      
+
       {stage === 'posts' && (
-        <Posts onBack={() => setStage('dashboard')} />  // ✅ back to Dashboard
+        <Posts onBack={() => setStage('dashboard')} />
       )}
 
       {stage === 'resources' && (
-        <Resources onBack={() => setStage('dashboard')} />  // ✅ back to Dashboard
+        <Resources onBack={() => setStage('dashboard')} />
       )}
     </div>
   );

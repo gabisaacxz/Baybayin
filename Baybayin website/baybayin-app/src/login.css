@@ -1,59 +1,87 @@
+/* General body */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: rgb(15, 15, 15); /* Black background */
-  color: rgb(212, 175, 55); /* Gold text */
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: #d4af37; /* Gold text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
+/* Container */
 .login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
 }
 
+/* Title */
 .login-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: rgb(212, 175, 55); /* Gold */
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #d4af37;
+  letter-spacing: 1px;
 }
 
+/* Login box */
 .login-box {
-  background: #111; /* Deep black box */
-  border: 1px solid rgb(212, 175, 55); /* Gold border */
-  padding: 30px;
-  border-radius: 12px;
-  width: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 40px 35px;
+  width: 350px;
   display: flex;
   flex-direction: column;
+  transition: all 0.3s ease;
 }
 
+/* Labels */
 .login-box label {
   margin: 10px 0 5px;
-  color: rgb(212, 175, 55); /* Gold labels */
+  color: #d4af37;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
+/* Inputs */
 .login-box input {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #333;
-  border-radius: 5px;
-  background: black;
-  color: white;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
+.login-box input:focus {
+  background: rgba(212, 175, 55, 0.1);
+  box-shadow: 0 0 8px #d4af37;
+}
+
+/* Button */
 .login-box button {
-  padding: 10px;
-  background-color: rgb(178, 34, 34); /* Red button */
-  color: white;
+  padding: 12px;
+  background: linear-gradient(45deg, #b22222, #d4af37);
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 12px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
 .login-box button:hover {
-  background-color: rgb(212, 175, 55); /* Gold hover */
-  color: black;
+  background: linear-gradient(45deg, #d4af37, #b22222);
+  color: #111;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
 }
+

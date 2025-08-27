@@ -1,8 +1,8 @@
 import React from 'react';
 import './Dashboard.css';
-import { FileText, Book } from 'lucide-react';
+import { FileText, Book, ArrowLeft } from 'lucide-react';
 
-function Dashboard({ onGoPosts, onGoResources }) {   // 👈 handlers from App
+function Dashboard({ onGoPosts, onGoResources, onBack }) { // ✅ added onBack
   return (
     <div className="dashboard-container">
       <header className="dashboard-header">
@@ -48,6 +48,14 @@ function Dashboard({ onGoPosts, onGoResources }) {   // 👈 handlers from App
           <Book size={18} style={{ marginRight: "8px" }} />
           Resources
         </div>
+      </div>
+
+      {/* Back button */}
+      <div className="dashboard-footer">
+        <button className="back-button" onClick={onBack}>
+          <ArrowLeft size={18} style={{ marginRight: "6px" }} />
+          Back to Start
+        </button>
       </div>
     </div>
   );

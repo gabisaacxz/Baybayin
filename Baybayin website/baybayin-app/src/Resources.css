@@ -1,74 +1,128 @@
 .resources-container {
-  max-width: 900px;
+  max-width: 950px;
   margin: auto;
   padding: 20px;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
 }
 
+/* Header */
 .resources-header h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 8px;
 }
 
+.resources-header p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* Tabs navigation */
 .resources-nav {
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin: 20px 0;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
 }
 
 .resources-nav button {
-  padding: 8px 16px;
+  padding: 10px 18px;
   border: none;
-  border-radius: 8px;
-  background: #f4f4f4;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #d4af37;
+  font-weight: 500;
   cursor: pointer;
-  transition: 0.2s;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
 }
 
 .resources-nav button.active {
-  background: #457b9d;
-  color: white;
+  background: linear-gradient(135deg, #b22222, #d4af37);
+  color: #111;
   font-weight: bold;
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.5);
 }
 
+.resources-nav button:hover {
+  background: rgba(212, 175, 55, 0.15);
+  color: #fff;
+}
+
+/* Content area */
 .resources-content {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
   text-align: left;
 }
 
-/* Footer */
+/* Muted text */
+.muted {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Cards styling (if used) */
+.resource-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  padding: 16px 20px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5);
+}
+
+/* Footer back button */
 .resources-footer {
   display: flex;
   justify-content: flex-start;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
-/* Back Button */
 .back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 10px 18px;
-  background: linear-gradient(135deg, #1d3557, #457b9d);
-  color: white;
-  border: none;
-  border-radius: 30px;
+  padding: 12px 22px;
+
   font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+
+  background: rgba(255, 255, 255, 0.08); /* subtle glass */
+  backdrop-filter: blur(10px) saturate(180%);
+  border: 1px solid rgba(212, 175, 55, 0.4); /* subtle gold border */
+  border-radius: 30px;
+
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease, border-color 0.3s ease;
 }
 
 .back-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+  background: rgba(212, 175, 55, 0.15); /* golden highlight */
+  border-color: rgba(212, 175, 55, 0.7);
 }
 
 .back-button:active {
   transform: scale(0.96);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
 }

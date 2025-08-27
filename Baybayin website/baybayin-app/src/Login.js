@@ -4,17 +4,21 @@ import './login.css';
 function Login({ onLogin }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setError('');
 
-    // Dummy authentication (replace later with backend check)
-    if (username === "admin" && password === "1234") {
-      onLogin("admin");
-    } else if (username && password) {
-      onLogin("user");
+    // Only allow predefined users
+    if (!username || !password) {
+      setError('Please enter both username and password.');
+    } else if (username === 'admin' && password === '1234') {
+      onLogin('admin');
+    } else if (username === 'user' && password === 'user123') {
+      onLogin('user');
     } else {
-      alert("Please enter username and password!");
+      setError('Incorrect username or password.');
     }
   };
 
@@ -35,6 +39,8 @@ function Login({ onLogin }) {
           value={password} 
           onChange={(e) => setPassword(e.target.value)} 
         />
+
+        {error && <p className="login-error">{error}</p>}
 
         <button type="submit">Login</button>
       </form>

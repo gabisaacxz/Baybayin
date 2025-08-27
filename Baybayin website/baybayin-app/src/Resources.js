@@ -14,7 +14,6 @@ function Resources({ onBack }) {
         </p>
       </header>
 
-      {/* Tabs Navigation */}
       <nav className="resources-nav">
         <button
           className={activeTab === "history" ? "active" : ""}
@@ -30,7 +29,6 @@ function Resources({ onBack }) {
         </button>
       </nav>
 
-      {/* Content Display */}
       <section className="resources-content">
         {activeTab === "history" && (
           <div>
@@ -66,7 +64,6 @@ function Resources({ onBack }) {
         )}
       </section>
 
-      {/* Back Button */}
       <footer className="resources-footer">
         <button className="back-button" onClick={onBack}>
           <ArrowLeft size={18} style={{ marginRight: "6px" }} />

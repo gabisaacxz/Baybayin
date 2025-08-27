@@ -1,43 +1,68 @@
+/* General body */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: #d4af37; /* Gold text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
+/* Container */
 .gs-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: rgb(15, 15, 15); /* Black */
-  color: rgb(212, 175, 55); /* Gold */
   text-align: center;
-  padding: 0 20px;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.05); /* semi-transparent */
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.gs-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 36px rgba(212, 175, 55, 0.5);
+}
+
+/* Title */
 .gs-title {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: rgb(212, 175, 55); /* Gold */
+  letter-spacing: 1px;
 }
 
+/* Tagline */
 .gs-tagline {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: rgb(212, 175, 55); /* Gold */
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  color: #d4af37;
+  opacity: 0.9;
 }
 
+/* Button */
 .gs-button {
-  padding: 15px 30px;
-  font-size: 1rem;
-  background-color: rgb(178, 34, 34); /* Red */
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  background: linear-gradient(45deg, #b22222, #d4af37);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
 }
 
 .gs-button:hover {
-  background-color: rgb(212, 175, 55); /* Gold on hover */
-  color: black;
+  background: linear-gradient(45deg, #d4af37, #b22222);
+  color: #111;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
 }
