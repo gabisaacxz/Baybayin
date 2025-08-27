@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.gs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(15, 15, 15); /* Black */
+  color: rgb(212, 175, 55); /* Gold */
+  text-align: center;
+  padding: 0 20px;
+}
+
+.gs-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: rgb(212, 175, 55); /* Gold */
+}
+
+.gs-tagline {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: rgb(212, 175, 55); /* Gold */
+}
+
+.gs-button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  background-color: rgb(178, 34, 34); /* Red */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.gs-button:hover {
+  background-color: rgb(212, 175, 55); /* Gold on hover */
+  color: black;
+}

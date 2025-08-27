@@ -1,0 +1,143 @@
+.posts-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.posts-header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.posts-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.posts-nav button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #f4f4f4;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.posts-nav button.active {
+  background: #e63946;
+  color: white;
+  font-weight: bold;
+}
+
+.posts-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Muted text */
+.muted {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* Cards */
+.post-card, .featured-card, .daily-card {
+  background: #f9f9f9;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.featured-card {
+  background: #fff3f3;
+  border-left: 5px solid #e63946;
+}
+
+.daily-card {
+  background: #f0f7ff;
+  border-left: 5px solid #3a86ff;
+}
+
+/* Request form */
+.request-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.request-form input,
+.request-form select,
+.request-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 6px;
+}
+
+.request-form button {
+  margin-top: 8px;
+}
+
+/* Success message */
+.success {
+  margin-top: 10px;
+  background: #ecfdf5;
+  border: 1px solid #10b981;
+  color: #065f46;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+/* Request list */
+.request-list {
+  margin-top: 18px;
+}
+
+.request-item {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.posts-footer {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+/* Back Button */
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #ff6b6b, #e63946);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.back-button:active {
+  transform: scale(0.96);
+}
